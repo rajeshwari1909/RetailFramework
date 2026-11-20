@@ -4,9 +4,10 @@ export class LoginPage {
   constructor(private page: Page) {}
 
   async navigateToLogin() {
-    //await this.page.goto('https://automationexercise.com');
-    await this.page.goto('/');
-    await this.page.getByRole('link', { name: 'Signup / Login' }).click();
+    await this.page.goto('/login');
+    await expect(
+      this.page.getByRole('heading', { name: 'Login to your account' })
+    ).toBeVisible({ timeout: 10000 });
   }
 
   async login(email: string, password: string) {

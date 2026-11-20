@@ -1,15 +1,16 @@
 //import { expect, test } from '@playwright/test';
-import { test } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
+//import { test } from '@playwright/test';
+//import { LoginPage } from '../pages/LoginPage';
+import { test } from '../fixtures/baseFixture';
 import { testUser } from '../testdata/user';
 
 
-test('log in with a registered user account', async ({ page }) => {
+test('log in with a registered user account', async ({ loginPage }) => {
   //const email = process.env.LOGIN_EMAIL;
   //const password = process.env.LOGIN_PASSWORD;
    //const email = 'rajeshwari.yadav@perficient.com';
    //const password = 'rajeshwari';
-   const loginPage = new LoginPage(page);
+   //const loginPage = new LoginPage(page);
 
   await loginPage.navigateToLogin();
 
